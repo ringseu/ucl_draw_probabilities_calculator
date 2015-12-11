@@ -66,7 +66,7 @@ kyiv = team("Dinamo Kyiv", "G", "Russia/Ukraine", "2")
 gent = team("Gent", "H", "Danmark", "2")
 
 listFirst = [realmadrid, wolfsburg, atmadrid, mancity, barcelona, bayernmunich, chelsea, zenit]
-listSecond = [psv, benfica, juventus, roma, arsenal, kyiv, gent, paris]
+listSecond = [paris, psv, benfica, juventus, roma, arsenal, kyiv, gent]
 firstAllResult = list(itertools.permutations(listFirst, len(listFirst)))
 secondAllResult = list(itertools.permutations(listSecond, len(listSecond)))
 
