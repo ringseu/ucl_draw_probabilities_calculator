@@ -2,4 +2,4 @@
 
 to calculate the ucl 1/8 final draw probabilities
 
-written with Python2
+written in Python2, also support Python3
