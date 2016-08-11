@@ -72,9 +72,9 @@ secondAllResult = list(itertools.permutations(listSecond, len(listSecond)))
 
 
 def main():
-    for i in range(0, 8):
+    for i in range(0, 7):
         getProbabilityByTeam(listFirst, listSecond, secondAllResult, i)
-    for j in range(0, 8):
+    for j in range(0, 7):
         getProbabilityByTeam(listSecond, listFirst, firstAllResult, j)
 
 
