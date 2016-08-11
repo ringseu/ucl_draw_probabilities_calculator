@@ -21,7 +21,7 @@ class team:
         self.ranking = teamRanking
     
     def printTeam(self):
-        print self.name, "-",  self.country, "-", self.group+self.ranking
+        print (self.name, "-",  self.country, "-", self.group+self.ranking)
     
 
 def isDrawCorrect(list1, list2):
@@ -32,7 +32,7 @@ def isDrawCorrect(list1, list2):
 
 
 def getProbabilityByTeam(list1, list2, allResult2, index):
-    print list1[index].name
+    print (list1[index].name)
     totalCount = 0
     proList = {
                list2[0].name:0, list2[1].name:0, list2[2].name:0, list2[3].name:0, \
@@ -45,7 +45,7 @@ def getProbabilityByTeam(list1, list2, allResult2, index):
         else:
             pass
     for i in range(0, 7):
-        print "draw: ", list2[i].name, "  probability: ", proList[list2[i].name]*1.0/totalCount
+        print ("draw: ", list2[i].name, "  probability: ", proList[list2[i].name]*1.0/totalCount)
 
 
 realmadrid = team("Real Madrid", "A", "Spain", "1")
