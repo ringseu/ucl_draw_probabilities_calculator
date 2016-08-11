@@ -25,7 +25,7 @@ class team:
     
 
 def isDrawCorrect(list1, list2):
-    for i in range(0,8):
+    for i in range(0,7):
         if (list2[i].group == list1[i].group) or (list2[i].country == list1[i].country):
             return False
     return True
@@ -44,7 +44,7 @@ def getProbabilityByTeam(list1, list2, allResult2, index):
             proList[someResult[index].name] += 1
         else:
             pass
-    for i in range(0, 8):
+    for i in range(0, 7):
         print "draw: ", list2[i].name, "  probability: ", proList[list2[i].name]*1.0/totalCount
 
 
