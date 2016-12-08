@@ -2,9 +2,7 @@
 
 '''
 Module: uclDrawCal
-
-Created on 2015-12-10
-
+Created on 2016-12-8
 @author: Ring
 '''
 
@@ -25,7 +23,7 @@ class team:
     
 
 def isDrawCorrect(list1, list2):
-    for i in range(0,7):
+    for i in range(0,8):
         if (list2[i].group == list1[i].group) or (list2[i].country == list1[i].country):
             return False
     return True
@@ -44,37 +42,37 @@ def getProbabilityByTeam(list1, list2, allResult2, index):
             proList[someResult[index].name] += 1
         else:
             pass
-    for i in range(0, 7):
+    for i in range(0, 8):
         print ("draw: ", list2[i].name, "  probability: ", proList[list2[i].name]*1.0/totalCount)
 
 
-realmadrid = team("Real Madrid", "A", "Spain", "1")
-wolfsburg = team("Wolfsburg", "B", "Germany", "1")
-atmadrid = team("A.T.Madrid", "C", "Spain", "1")
-mancity = team("Man City", "D", "England", "1")
-barcelona = team("Barcelona", "E", "Spain", "1")
-bayernmunich = team("Bayern Munich", "F", "Germany", "1")
-chelsea = team("Chelsea", "G", "England", "1")
-zenit = team("Zenit", "H", "Russia/Ukraine", "1")
-paris = team("Paris Saint Germain", "A", "France", "2")
-psv = team("PSV", "B", "Holland", "2")
-benfica = team("Benfica", "C", "Portugal", "2")
-juventus = team("Juventus", "D", "Italy", "2")
-roma = team("Roma", "E", "Italy", "2")
-arsenal = team("Arsenal", "F", "England", "2")
-kyiv = team("Dinamo Kyiv", "G", "Russia/Ukraine", "2")
-gent = team("Gent", "H", "Danmark", "2")
+A1 = team("Arsenal", "A", "England", "1")
+B1 = team("Napoli", "B", "Italy", "1")
+C1 = team("Barcelona", "C", "Spain", "1")
+D1 = team("ATM", "D", "Spain", "1")
+E1 = team("Monaco", "E", "France", "1")
+F1 = team("Dortmund", "F", "Germany", "1")
+G1 = team("Leicester City", "G", "England", "1")
+H1 = team("Juventus", "H", "Italy", "1")
+A2 = team("Paris Saint Germain", "A", "France", "2")
+B2 = team("Benfica", "B", "Portugal", "2")
+C2 = team("Man City", "C", "England", "2")
+D2 = team("Bayern Munich", "D", "Germany", "2")
+E2 = team("Lerverkusen", "E", "Germany", "2")
+F2 = team("Real Madrid", "F", "Spain", "2")
+G2 = team("Porto", "G", "Portugal", "2")
+H2 = team("Sevilla", "H", "Spain", "2")
 
-listFirst = [realmadrid, wolfsburg, atmadrid, mancity, barcelona, bayernmunich, chelsea, zenit]
-listSecond = [paris, psv, benfica, juventus, roma, arsenal, kyiv, gent]
+listFirst = [A1, B1, C1, D1, E1, F1, G1, H1]
+listSecond = [A2, B2, C2, D2, E2, F2, G2, H2]
 firstAllResult = list(itertools.permutations(listFirst, len(listFirst)))
 secondAllResult = list(itertools.permutations(listSecond, len(listSecond)))
 
 
 def main():
-    for i in range(0, 7):
+    for i in range(0, 8):
         getProbabilityByTeam(listFirst, listSecond, secondAllResult, i)
-    for j in range(0, 7):
+    for j in range(0, 8):
         getProbabilityByTeam(listSecond, listFirst, firstAllResult, j)
 
 
