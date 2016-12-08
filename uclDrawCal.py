@@ -43,7 +43,7 @@ def getProbabilityByTeam(list1, list2, allResult2, index):
         else:
             pass
     for i in range(0, 8):
-        print ("draw: ", list2[i].name, "  probability: ", proList[list2[i].name]*1.0/totalCount)
+        print ("draw: ", list2[i].name+": ", proList[list2[i].name]*1.0/totalCount)
 
 
 A1 = team("Arsenal", "A", "England", "1")
