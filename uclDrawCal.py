@@ -30,7 +30,7 @@ def isDrawCorrect(list1, list2):
 
 
 def getProbabilityByTeam(list1, list2, allResult2, index):
-    print (list1[index].name)
+    print ('\n',list1[index].name)
     totalCount = 0
     proList = {
                list2[0].name:0, list2[1].name:0, list2[2].name:0, list2[3].name:0, \
