@@ -76,4 +76,5 @@ def main():
         getProbabilityByTeam(listSecond, listFirst, firstAllResult, j)
 
 
+        
 main()
